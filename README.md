@@ -1,6 +1,6 @@
 # oscar-export
 
-`oscar-export` is a standalone Go CLI for exporting OSCAR cache data directly to CSV without using the OSCAR GUI.
+`oscar-export` is a standalone Go CLI for exporting cache data from [OSCAR-code](https://gitlab.com/CrimsonNape/OSCAR-code) directly to CSV without using the OSCAR GUI.
 
 The Go module lives at `github.com/dwin/oscar-export`. If you install it with `go install`, the executable name is `oscar-export`.
 
@@ -9,6 +9,13 @@ It reproduces OSCAR's existing `Summary`, `Sessions`, and `Details` CSV exports 
 ```text
 /path/to/OSCAR_Data
 ```
+
+## Relationship to OSCAR
+
+- Current upstream repository: <https://gitlab.com/CrimsonNape/OSCAR-code>
+- Upstream project license: GPL v3 only, documented in the upstream [`COPYING`](https://gitlab.com/CrimsonNape/OSCAR-code/-/blob/master/COPYING) file
+- `oscar-export` is focused on interoperability with OSCAR cache formats and reproducing OSCAR CSV output behavior
+- `oscar-export` is an independent CLI and is not affiliated with the OSCAR maintainers
 
 ## What It Exports
 
@@ -36,6 +43,12 @@ This tool is intentionally scoped to the OSCAR cache formats present in the targ
 - `Sessions.info`: version `2`
 
 Unsupported versions fail fast with a clear error.
+
+## License
+
+This repository is licensed under the GNU General Public License v3.0 only. See [LICENSE](LICENSE).
+
+Using GPL v3 only here keeps redistribution terms aligned with the current OSCAR-code upstream license and removes ambiguity around reuse of OSCAR-compatible export behavior and future upstream-derived work.
 
 ## Installation
 
